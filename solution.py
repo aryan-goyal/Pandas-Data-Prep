@@ -6,6 +6,21 @@ data = 'Airline Code;DelayTimes;FlightCodes;To_From\nAir Canada (!);[21, 40];200
 StringData = StringIO("""{}""".format(data))
 
 df = pd.read_csv(StringData, sep=";")
-print(df)
+print("Intial Data:\n", df)
 
-# 1 FlightCodes column: Some values are null. Flight Codes are supposed to increase by 10
+df.fillna(method='ffill', axis=0, inplace=True)
+df.FlightCodes = df.FlightCodes.astype('int')
+# print("Cleaned FlightCodes:\n", df)
+
+df[['To', 'From']] = df.To_From.str.split('_', expand=True)
+df.To = df.To.str.upper()
+df.From = df.To.str.upper()
+df = df.drop(['To_From'], axis=1)
+# print("Cleaned To_From:\n", df)
+
+df['Airline Code'] = df['Airline Code'].str.replace(
+    r'[^a-zA-Z]+', " ", regex=True)
+df['Airline Code'] = df['Airline Code'].str.strip()
+# print("Cleaned Airline Code:\n", df)
+
+df.to_csv('cleanedData', sep=';', index=False)
