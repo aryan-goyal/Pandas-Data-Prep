@@ -5,13 +5,13 @@
 
 # Snapcommerce-F2021
 
-SnapTravel Case Study: Data Engineer Intern - Fall 2021 Term
+Snapcommerce Case Study: Data Engineer Intern - Fall 2021 Term
 
 Solution developed in Python using pandas library.
 
 ## 1. FlightCodes column
 
-1.
+1. Null values replaced with correct values.
 2. Column type changed to int.
 
 ## 2. To_From column
