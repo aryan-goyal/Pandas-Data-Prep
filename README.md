@@ -9,7 +9,7 @@ Snapcommerce Case Study: Data Engineer Intern - Fall 2021 Term
 
 The solution was developed in Python using the pandas library.
 
-The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cleanedData) file containes the data after the transformations have been applied.
+The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cleanedData) file contains the data after the transformations have been applied.
 
 ## 1. FlightCodes column
 
