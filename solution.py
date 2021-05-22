@@ -8,19 +8,25 @@ StringData = StringIO("""{}""".format(data))
 df = pd.read_csv(StringData, sep=";")
 # print("Intial Data:\n", df)
 
-df.fillna(method='ffill', axis=0, inplace=True)
+# 1 Find null rows, pandas series groupby (series.diff compares current and previous row)
+nul = df.FlightCodes.isnull()
+df.FlightCodes = nul.groupby(
+    (nul.diff() == True).cumsum()).sum()*10 + df.FlightCodes.ffill()
 df.FlightCodes = df.FlightCodes.astype('int')
 # print("Cleaned FlightCodes:\n", df)
 
+# 2
 df[['To', 'From']] = df.To_From.str.split('_', expand=True)
 df.To = df.To.str.upper()
-df.From = df.To.str.upper()
+df.From = df.From.str.upper()
 df = df.drop(['To_From'], axis=1)
 # print("Cleaned To_From:\n", df)
 
+# 3
 df['Airline Code'] = df['Airline Code'].str.replace(
     r'[^a-zA-Z]+', " ", regex=True)
 df['Airline Code'] = df['Airline Code'].str.strip()
 # print("Cleaned Airline Code:\n", df)
 
 df.to_csv('cleanedData', sep=';', index=False)
+print("Cleaned data:\n", df)

@@ -7,22 +7,24 @@
 
 Snapcommerce Case Study: Data Engineer Intern - Fall 2021 Term
 
-Solution developed in Python using pandas library.
+The solution was developed in Python using the pandas library.
+
+The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cleanedData) file containes the data after the transformations have been applied.
 
 ## 1. FlightCodes column
 
-1. Null values replaced with correct values.
+1. Null values are replaced with correct values.
 2. Column type changed to int.
 
 ## 2. To_From column
 
-1. Columns are spltit by underscore and added to DataFrame.
+1. Columns are split by underscore and added to DataFrame.
 2. Columns are converted to capital case.
 3. Orignal To_From column is dropped.
 
 ## 3. Airline Code column:
 
-1. Regex expression used removed eveything but letters and space.
+1. Regex expression used removed everything but letters and space.
 2. Leading and Trailing space trimmed.
 
 ## Mock SQL Query
