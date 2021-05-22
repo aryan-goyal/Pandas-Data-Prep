@@ -22,7 +22,7 @@ The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cl
 2. Columns are converted to capital case.
 3. Orignal To_From column is dropped.
 
-## 3. Airline Code column:
+## 3. Airline Code column
 
 1. Regex expression used removed everything but letters and space.
 2. Leading and Trailing space trimmed.
