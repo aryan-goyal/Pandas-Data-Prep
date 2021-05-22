@@ -6,7 +6,7 @@ data = 'Airline Code;DelayTimes;FlightCodes;To_From\nAir Canada (!);[21, 40];200
 StringData = StringIO("""{}""".format(data))
 
 df = pd.read_csv(StringData, sep=";")
-print("Intial Data:\n", df)
+# print("Intial Data:\n", df)
 
 df.fillna(method='ffill', axis=0, inplace=True)
 df.FlightCodes = df.FlightCodes.astype('int')
