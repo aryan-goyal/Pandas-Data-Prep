@@ -27,6 +27,6 @@ The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cl
 1. Regex expression used removed everything but letters and space.
 2. Leading and Trailing space trimmed.
 
-## Mock SQL Query
+## 4. Mock SQL Query
 
 `SELECT * FROM cleanedData WHERE From='WATERLOO';`
