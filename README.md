@@ -3,11 +3,7 @@
    <img alt="Pandas" src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" />
 </p>
 
-# Snapcommerce-F2021
-
-Snapcommerce Case Study: Data Engineer Intern - Fall 2021 Term
-
-The solution was developed in Python using the pandas library.
+Original raw data supplied was cleaned using Python and the pandas library.
 
 The [cleanedData](https://github.com/aryan-goyal/Snapcommerce-F2021/blob/main/cleanedData) file contains the data after the transformations have been applied.
 
